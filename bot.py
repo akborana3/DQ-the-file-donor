@@ -35,7 +35,7 @@ class Bot(Client):
             sleep_threshold=10,
         )
 
-    async def start(self):
+    async def start(self, **kwargs):
         b_users, b_chats = await db.get_banned()
         temp.BANNED_USERS = b_users
         temp.BANNED_CHATS = b_chats
